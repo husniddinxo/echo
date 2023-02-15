@@ -14,10 +14,6 @@ def main():
         text = data['message']['text']
         return 'hello'
 
-#if __name__ == '__main__':
-    echo_app.run()
-    print(chat_id, text)
-    return 'hello'
 
 
 
