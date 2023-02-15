@@ -14,7 +14,7 @@ def main():
     elif request.method == 'POST':
         data = request.get_json(force=True)
 
-        update: Update = update.de_json(data,bot)
+        update: Update = Update.de_json(data,bot)
 
         chat_id = update.message.chat.id
         text = update.message.text
