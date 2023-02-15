@@ -10,7 +10,16 @@ def main():
         data = request.get_json(force=True)
         print(data)
 
+        chat_id = data['message']['from']['id']
+        text = data['message']['text']
         return 'hello'
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     echo_app.run()
+    print(chat_id, text)
+    return 'hello'
+
+
+
+
+
