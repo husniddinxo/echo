@@ -8,7 +8,7 @@ def start(update, context):
     keyboard = [
         [KeyboardButton('dog'), KeyboardButton('cat')]
     ]
-    update.message.reply_text(text, reply_markup=ReplyKeyboardMarkup(keyboard))
+    update.message.reply_text(text, reply_markup=ReplyKeyboardMarkup(keyboard,resize_keyboard=True))
 
 
 
