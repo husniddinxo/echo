@@ -3,12 +3,12 @@ from telegram.ext import CallbackContext, Updater
 import requests 
 
 
-def start(chat_id):
+def start(update, context):
     text = 'Welcome to our bot\n\npress the button for dog photo and cet '
     keyboard = [
         [KeyboardButton('dog'), KeyboardButton('cat')]
     ]
-    Update.message.reply_text(text, reply_markup=ReplyKeyboardMarkup(keyboard))
+    update.message.reply_text(text, reply_markup=ReplyKeyboardMarkup(keyboard))
 
 
 
@@ -24,6 +24,4 @@ def cat(update: Update, context: CallbackContext):
     r = requests.get('https://aws.random.cat/meow')
     url = r.json()['file']
     update.message.reply_photo(url)
-
-
 
